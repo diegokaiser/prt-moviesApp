@@ -1,0 +1,37 @@
+body {
+  background: #393939;
+  font-family: $poppins;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: inherit;
+}
+
+.main {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: inherit;
+  &__content {
+    background: #111111;
+    border: 1px solid #555;
+    border-radius: 7px;
+    box-sizing: border-box;
+    height: 896px;
+    margin: 0 auto;
+    padding-top: 28px;
+    position: relative;
+    width: 414px;
+  }
+}
+
+h2 {
+  color: white;
+  font-size: 30px;
+  font-weight: 700;
+
+  span {
+    color: #FFC700;
+  }
+}

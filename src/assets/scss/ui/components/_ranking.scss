@@ -1,0 +1,17 @@
+.ranking {
+  &__content {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+    .stars {
+      align-items: center;
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 9px;
+      gap: 5px;
+    }
+  }
+}

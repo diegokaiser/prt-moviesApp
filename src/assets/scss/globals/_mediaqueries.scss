@@ -1,0 +1,11 @@
+@mixin mobile420 {
+  @media (min-width: 421px) {
+    @content;
+  }
+}
+
+@mixin mobiland414 {
+  @media only screen and (min-device-width: 375px) and (max-device-width: 940px) and (orientation: landscape) {
+    @content;
+  }
+}

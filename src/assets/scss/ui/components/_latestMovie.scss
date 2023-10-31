@@ -1,0 +1,61 @@
+.latestMovie {
+  &__content {
+    h2 {
+      margin-bottom: 20px;
+    }
+    .item {
+      align-items: flex-start;
+      display: flex;
+      gap: 16px;
+      justify-content: space-between;
+      figure {
+        background: #424242;
+        border-radius: 14px;
+        height: 273px;
+        margin-bottom: 12px;
+        width: 182px;
+        img {
+          border-image-width: 0;
+          font-size: 0;
+          height: 100%;
+          line-height: 0;
+          object-fit: cover;
+          object-position: center center;
+          width: 100%;
+        }
+      }
+      &__data {
+        width: 180px;
+        h3 {
+          color: white;
+          font-size: 20px;
+          font-weight: 700;
+          line-height: normal;
+          margin-bottom: 7px;
+        }
+        .ranking {
+          margin-bottom: 7px;
+        }
+        .categories {
+          &__content {
+            color: white;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: normal;
+            margin-bottom: 7px;
+          }
+        }
+        .synopsis {
+          &__content {
+            p {
+              color: #888888;
+              font-size: 13px;
+              font-weight: 400;
+              line-height: normal;
+            }
+          }
+        }
+      }
+    }
+  }
+}

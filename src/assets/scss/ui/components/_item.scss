@@ -1,0 +1,23 @@
+.item {
+  &__content {
+    figure {
+      background: #424242;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      img {
+        border-image-width: 0;
+        font-size: 0;
+        height: 100%;
+        line-height: 0;
+        object-fit: cover;
+        object-position: center center;
+        width: 100%;
+      }
+    }
+    h3 {
+      color: white;
+      font-size: 20px;
+      font-weight: 700;
+    }
+  }
+}
