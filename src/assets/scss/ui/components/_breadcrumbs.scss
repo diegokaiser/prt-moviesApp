@@ -1,0 +1,14 @@
+.breadcrumbs {
+  margin-bottom: 20px;
+  &__content {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    button {
+      background: transparent;
+      border: 0;
+      margin-right: 21px;
+      padding: 0;
+    }
+  }
+}

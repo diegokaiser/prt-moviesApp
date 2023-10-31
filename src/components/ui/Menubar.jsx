@@ -1,26 +1,29 @@
 import HomeIco from '../../assets/images/icons/home.svg'
 import SearchIco from '../../assets/images/icons/search.svg'
 import BookmarkIco from '../../assets/images/icons/bookmark.svg'
+import { Link } from 'react-router-dom'
 
 export function Menubar() {
   return (
     <div className="menubar">
       <div className="menubar__content">
-        <button 
-          type="button"
+        <Link 
+          to={'/prt-moviesApp/'}
         >
           <img src={HomeIco} alt="" />
-        </button>
-        <button 
-          type="button"
+        </Link>
+        <Link 
+          to={'/prt-moviesApp/discover'}
+          state={{ title: 'Discover' }}
         >
           <img src={SearchIco} alt="" />
-        </button>
-        <button 
-          type="button"
+        </Link>
+        <Link 
+          to={'/prt-moviesApp/search'}
+          state={{ title: 'Search' }}
         >
           <img src={BookmarkIco} alt="" />
-        </button>
+        </Link>
       </div>
     </div>
   )

@@ -1,8 +1,11 @@
 .menubar {
+  background: #111;
   bottom: 0;
+  border-radius: 0 0 7px 7px;
   left: 0;
   position: absolute;
   right: 0;
+  z-index: 9999;
   &__content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -11,10 +14,13 @@
     height: 70px;
     margin: 0 auto;
     width: 92%;
-    button {
+    a {
+      align-items: center;
       background: transparent;
       border: 0;
+      display: flex;
       grid-column: auto;
+      justify-content: center;
       margin: 0;
       padding: 0;
       &:focus-visible {

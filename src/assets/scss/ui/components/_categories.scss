@@ -1,0 +1,21 @@
+.categories {
+  &__content {
+    margin-bottom: 28px;
+    span {
+      align-items: center;
+      background: #2A2A2A;
+      border-radius: 25px;
+      color: white;
+      display: inline-flex;
+      font-size: 14px;
+      font-weight: 400;
+      justify-content: center;
+      height: 25px;
+      padding: 2px 14px;
+      &.active {
+        background: #FFC700;
+        color: #111;
+      }
+    }
+  }
+}

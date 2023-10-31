@@ -3,9 +3,7 @@ export function Categories() {
     <>
       <div className="categories">
         <div className="categories__content">
-          <span>Action</span>, 
-          <span>Comedy</span>, 
-          <span>Crime</span>
+          <span className="active">Action</span>, <span>Comedy</span>, <span>Crime</span>
         </div>
       </div>
     </>
