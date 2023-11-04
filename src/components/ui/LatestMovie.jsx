@@ -40,7 +40,7 @@ export function LatestMovie() {
                     rank={data.vote_average}
                   />
                 }
-                <Categories />
+                <Categories listMode={true} />
                 <Synopsis 
                   overview={data.overview}
                 />

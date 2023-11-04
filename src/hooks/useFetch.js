@@ -28,3 +28,8 @@ export const getLatestID = async () => {
   const res = await baseAPI.get(`/movie/latest`)
   return res.data
 }
+
+export const getGenres = async () => {
+  const res = await baseAPI.get(`/genre/movie/list`)
+  return res.data
+}

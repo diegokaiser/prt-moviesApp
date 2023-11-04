@@ -5,12 +5,48 @@
     margin-left: 16px;
     margin-right: 16px;
     .list {
+      height: calc(100% - 69px - 50px);
+      overflow-y: hidden;
+      //margin-right: -16px;
       &__content {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         gap: 20px;
+        height: 100%;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          opacity: 1;
+        }
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 5px;
+          height: 10px;
+          background-color: #FFC700;
+        }
+        &::-webkit-scrollbar:vertical {
+          display: none;
+        }
         .item {
           width: calc(50% - 10px);
+          &__content {
+            h3 {
+              font-size: 16px;
+            }
+            .ranking {
+              &__content {
+                font-size: 16px;
+                .stars {
+                  img {
+                    height: 18px;
+                    width: 18px;
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }

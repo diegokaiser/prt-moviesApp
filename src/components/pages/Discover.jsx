@@ -25,7 +25,7 @@ export function Discover() {
       <div className="discover">
         <div className="discover__content">
           <Breadcrumbs title={state.title} />
-          <Categories />
+          <Categories listMode={false} />
           <List>
             {
               status === 'success' ?
