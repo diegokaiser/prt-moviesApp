@@ -1,0 +1,39 @@
+.search {
+  margin-bottom: 21px;
+  &__content {
+    position: relative;
+    img {
+      left: 16px;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+    input {
+      background: #2B2B2B;
+      border: 0;
+      border-radius: 10px;
+      box-sizing: border-box;
+      height: 56px;
+      padding: 14px 84px 14px 49px;
+      width: 100%;
+      &::placeholder {
+        color: #555;
+        font-size: 18px;
+      }
+    }
+    button {
+      background: #FFC700;
+      border: 0;
+      border-radius: 7px;
+      color: #111;
+      padding: 4px 7px;
+      position: absolute;
+      right: 16px;
+      text-transform: uppercase;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+    }
+  }
+}

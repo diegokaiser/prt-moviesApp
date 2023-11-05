@@ -33,3 +33,13 @@ export const getGenres = async () => {
   const res = await baseAPI.get(`/genre/movie/list`)
   return res.data
 }
+
+export const getMovieById = async (id) => {
+  const res = await baseAPI.get(`/movie/${id}`)
+  return res.data
+}
+
+export const getMovieByGenre = async (genre) => {
+  const res = await baseAPI.get(`/discover/movie?with_genres=${genre}`)
+  return res.data
+}

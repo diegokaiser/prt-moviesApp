@@ -1,0 +1,8 @@
+.results {
+  height: calc(100% - 70px);
+  &__content {
+    height: 100%;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+}

@@ -5,7 +5,10 @@ import { getGenres } from '../../hooks/useFetch'
 import { Loading } from '../elements/Loading'
 import { Error } from '../elements/Error'
 
-export function Categories({ listMode }) {
+export function Categories({ 
+  listMode,
+  handleFilter
+}) {
   let categories
   const { status, data } = useQuery({
     queryKey: ['categories'],
@@ -46,6 +49,7 @@ export function Categories({ listMode }) {
                         <button
                           key={category.id}
                           type='button'
+                          onClick={(e) => handleFilter(e, category.name)}
                         >
                           {category.name}
                         </button>

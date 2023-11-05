@@ -31,6 +31,7 @@ export function TopFive() {
                   return (
                     <Item
                       key={movie.id}
+                      id={movie.id}
                       title={movie.title}
                       poster={movie.poster_path}
                       rank={movie.vote_average}

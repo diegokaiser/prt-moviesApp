@@ -3,7 +3,7 @@ import { getLatestID } from '../../hooks/useFetch'
 import { Loading } from '../elements/Loading'
 import { Error } from '../elements/Error'
 import { Ranking } from './Ranking'
-import { Categories } from './Categories'
+import { Tags } from './Tags'
 import { Synopsis } from './Synopsis'
 import DefaultPoster from '../../assets/images/defaultPoster.png'
 import BookmarkIco from '../../assets/images/icons/bookmark.svg'
@@ -40,7 +40,7 @@ export function LatestMovie() {
                     rank={data.vote_average}
                   />
                 }
-                <Categories listMode={true} />
+                <Tags genres={data.genres} />
                 <Synopsis 
                   overview={data.overview}
                 />

@@ -1,0 +1,29 @@
+.tags {
+  &__content {
+    margin-bottom: 10px;
+    span {
+      color: #fff;
+      display: inline-block;
+      font-size: 14px;
+      margin-left: 5px;
+      padding-right: 4px;
+      position: relative;
+      &::after {
+        content: ",";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+      &:first-child {
+        margin-left: 0;
+      }
+      &:last-child {
+        padding-right: 0;
+        &::after {
+          display: none;
+        }
+      }
+    }
+  }
+}

@@ -1,51 +1,54 @@
 .item {
   &__content {
-    figure {
-      background: #424242;
-      border-radius: 14px;
-      font-size: 0;
-      line-height: 0;
-      margin-bottom: 12px;
-      position: relative;
-      img {
-        border-image-width: 0;
+    a {
+      text-decoration: none;
+      figure {
+        background: #424242;
         border-radius: 14px;
         font-size: 0;
-        height: 100%;
         line-height: 0;
-        object-fit: cover;
-        object-position: center center;
-        width: 100%;
-      }
-      button {
-        align-items: center;
-        background: #111111;
-        border: 0;
-        border-radius: 40px;
-        display: flex;
-        justify-content: center;
-        height: 40px;
-        margin: 0;
-        padding: 0;
-        position: absolute;
-        right: 12px;
-        top: 12px;
-        width: 40px;
+        margin-bottom: 12px;
+        position: relative;
         img {
-          border-radius: 0;
+          border-image-width: 0;
+          border-radius: 14px;
           font-size: 0;
-          height: auto;
+          height: 100%;
           line-height: 0;
-          width: 18px;
+          object-fit: cover;
+          object-position: center center;
+          width: 100%;
+        }
+        button {
+          align-items: center;
+          background: #111111;
+          border: 0;
+          border-radius: 40px;
+          display: flex;
+          justify-content: center;
+          height: 40px;
+          margin: 0;
+          padding: 0;
+          position: absolute;
+          right: 12px;
+          top: 12px;
+          width: 40px;
+          img {
+            border-radius: 0;
+            font-size: 0;
+            height: auto;
+            line-height: 0;
+            width: 18px;
+          }
         }
       }
-    }
-    h3 {
-      color: white;
-      font-size: 20px;
-      font-weight: 700;
-      line-height: 22px;
-      min-height: 44px;
+      h3 {
+        color: white;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 22px;
+        min-height: 44px;
+      }
     }
   }
 }

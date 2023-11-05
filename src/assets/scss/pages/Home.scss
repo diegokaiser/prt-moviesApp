@@ -1,8 +1,29 @@
 .home {
   height: calc(100% - 70px);
+  overflow-y: hidden;
   &__content {
-    height: 100%;
     margin-left: 16px;
     margin-right: 16px;
+    height: 100%;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+      opacity: 1;
+    }
+    &::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+    }
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      height: 10px;
+      background-color: #FFC700;
+    }
+    &::-webkit-scrollbar:vertical {
+      display: none;
+    }
+    a {
+      &.btn-link {
+        margin-bottom: 28px;
+      }
+    }
   }
 }
