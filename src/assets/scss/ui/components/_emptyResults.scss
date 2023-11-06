@@ -1,0 +1,36 @@
+.empty {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  opacity: .25;
+  &__figure {
+    background: #424242;
+    border-radius: 14px;
+    height: 273px;
+    position: relative;
+    width: 182px;
+  }
+  &__data {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+  }
+  &__title {
+    background: #424242;
+    border-radius: 14px;
+    height: 28px;
+    margin-bottom: 14px;
+  }
+  &__rank {
+    background: #424242;
+    border-radius: 14px;
+    height: 28px;
+    margin-bottom: 14px;
+    width: 75%;
+  }
+  &__synopsis {
+    background: #424242;
+    border-radius: 14px;
+    height: 190px;
+  }
+}

@@ -4,5 +4,124 @@
     height: 100%;
     margin-left: 16px;
     margin-right: 16px;
+    .categories {
+      &__content {
+        margin-bottom: 21px;
+      }
+    }
+    .counter {
+      color: #fff;
+      margin-bottom: 21px;
+    }
+    .list {
+      height: calc(100% - 51px - 77px - 28px - 70px);
+      overflow-y: hidden;
+      &__content {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+          opacity: 1;
+        }
+        &::-webkit-scrollbar-track {
+          -webkit-box-shadow: inset 0 0 0px rgba(0, 0, 0, 0);
+        }
+        &::-webkit-scrollbar-thumb {
+          border-radius: 5px;
+          height: 10px;
+          background-color: #FFC700;
+        }
+        &::-webkit-scrollbar:vertical {
+          display: none;
+        }
+        .ritem {
+          margin-top: 28px;
+          width: 100%;
+          &:first-child {
+            margin-top: 0;
+          }
+          &__content {
+            a {
+              align-items: flex-start;
+              display: flex;
+              gap: 16px;
+              justify-content: space-between;
+              text-decoration: none;
+            }
+            figure {
+              background: #424242;
+              border-radius: 14px;
+              height: 273px;
+              position: relative;
+              width: 182px;
+              img {
+                border-image-width: 0;
+                border-radius: 14px;
+                font-size: 0;
+                height: 100%;
+                line-height: 0;
+                object-fit: cover;
+                object-position: center center;
+                width: 100%;
+              }
+              button {
+                align-items: center;
+                background: #111111;
+                border: 0;
+                border-radius: 40px;
+                display: flex;
+                justify-content: center;
+                height: 40px;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                right: 12px;
+                top: 12px;
+                width: 40px;
+                img {
+                  border-radius: 0;
+                  font-size: 0;
+                  height: auto;
+                  line-height: 0;
+                  width: 18px;
+                }
+              }
+            }
+          }
+          &__data {
+            width: 180px;
+            h3 {
+              color: white;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: normal;
+              margin-bottom: 7px;
+            }
+            .ranking {
+              margin-bottom: 7px;
+            }
+            .categories {
+              &__content {
+                color: white;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: normal;
+                margin-bottom: 7px;
+              }
+            }
+            .synopsis {
+              &__content {
+                p {
+                  color: #888888;
+                  font-size: 13px;
+                  font-weight: 400;
+                  line-height: normal;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }

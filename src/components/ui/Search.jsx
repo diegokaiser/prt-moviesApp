@@ -1,6 +1,21 @@
+/* eslint-disable react/prop-types */
+
+import { useState } from 'react'
 import SearchIco from '../../assets/images/search.svg'
 
-export function Search() {
+export function Search({ handleSearch }) {
+  const [input, setInput] = useState(false)
+  const [keyword, setKeyword] = useState('')
+
+  const handleOnChange = (e) => {
+    setKeyword(e.target.value)
+    if(e.target.value.length >= 3) {
+      setInput(true)
+    } else {
+      setInput(false)
+    }
+  }
+
   return (
     <>
       <div className="search">
@@ -9,10 +24,14 @@ export function Search() {
           <input 
             type="text" 
             placeholder="Search..."
+            onChange={handleOnChange}
           />
           <button
+            className={input ? 'active' : ''}
+            type='button'
+            onClick={(e) => handleSearch(e, keyword)}
           >
-            Clear
+            Search
           </button>
         </div>
       </div>

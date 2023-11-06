@@ -12,13 +12,14 @@ import { Error } from '../elements/Error'
 export function Discover() {
   let { state } = useLocation()
   let movies
-  const { status, data } = useQuery({
+  const { status, data, refetch } = useQuery({
     queryKey: ['movies'],
     queryFn: getMovies
   })
 
   if(status === 'success') {
     movies = [...data.results]
+    console.log(data)
   }
 
   const onFilter = (e, genre) => {

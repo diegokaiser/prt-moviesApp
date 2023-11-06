@@ -43,3 +43,8 @@ export const getMovieByGenre = async (genre) => {
   const res = await baseAPI.get(`/discover/movie?with_genres=${genre}`)
   return res.data
 }
+
+export const getMovieByKeyword = async (keyword) => {
+  const res = await baseAPI.get(`/search/movie?query=${keyword}`)
+  return res.data
+}

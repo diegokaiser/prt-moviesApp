@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 
 export function Tags({ genres }) {
-  console.log(genres)
   
   return (
     <div className="tags">

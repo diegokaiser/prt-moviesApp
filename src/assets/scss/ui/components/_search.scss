@@ -14,6 +14,8 @@
       border: 0;
       border-radius: 10px;
       box-sizing: border-box;
+      color: white;
+      font-size: 16px;
       height: 56px;
       padding: 14px 84px 14px 49px;
       width: 100%;
@@ -21,19 +23,31 @@
         color: #555;
         font-size: 18px;
       }
+      &:focus-visible {
+        outline: none;
+      }
     }
     button {
       background: #FFC700;
       border: 0;
       border-radius: 7px;
       color: #111;
+      cursor: pointer;
       padding: 4px 7px;
+      opacity: 0;
       position: absolute;
       right: 16px;
       text-transform: uppercase;
       top: 50%;
       transform: translateY(-50%);
       z-index: 2;
+      transition: .35s ease;
+      &.active {
+        opacity: 1;
+      }
+      &:focus-visible {
+        outline: none;
+      }
     }
   }
 }
