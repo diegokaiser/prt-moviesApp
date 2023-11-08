@@ -8,7 +8,7 @@ export function Bookmarks() {
     <>
       <div className="bookmarks">
         <div className="bookmarks__content">
-          <Breadcrumbs title={state.title} />
+          <Breadcrumbs title={title} />
           <List />
         </div>
       </div>

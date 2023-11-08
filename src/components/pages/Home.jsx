@@ -12,7 +12,7 @@ export function Home() {
         <TopFive />
         <LatestMovie />
         <Link
-          to={`/prt-moviesApp/discover/${page}/${genres}`}
+          to={`/discover/${page}/${genres}`}
           state={{ title: 'Discover' }}
           className='btn-link'
         >

@@ -15,14 +15,18 @@ body {
   min-height: inherit;
   &__content {
     background: #111111;
-    border: 1px solid #555;
-    border-radius: 7px;
     box-sizing: border-box;
-    height: 896px;
+    height: 100vh;
     margin: 0 auto;
     padding-top: 28px;
     position: relative;
-    width: 414px;
+    width: 100%;
+    @include mobile420 {
+      border: 1px solid #555;
+      border-radius: 7px;
+      height: 896px;
+      width: 414px;
+    }
   }
 }
 

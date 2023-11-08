@@ -22,7 +22,7 @@ export function Ranking({ rank }) {
               <img src={NoStart} alt="" />
               <img src={NoStart} alt="" />    
             </> :
-            rank > 2 && rank < 3 ?
+            rank > 2 && rank <= 3 ?
             <>
               <img src={Star} alt="" />
               <img src={HalfStar} alt="" />
@@ -38,7 +38,7 @@ export function Ranking({ rank }) {
               <img src={NoStart} alt="" />
               <img src={NoStart} alt="" />
             </> :
-            rank > 4 && rank < 5 ?
+            rank > 4 && rank <= 5 ?
             <>
               <img src={Star} alt="" />
               <img src={Star} alt="" />
@@ -54,7 +54,7 @@ export function Ranking({ rank }) {
               <img src={NoStart} alt="" />
               <img src={NoStart} alt="" />
             </> :
-            rank > 6 && rank < 7 ?
+            rank > 6 && rank <= 7 ?
             <>
               <img src={Star} alt="" />
               <img src={Star} alt="" />
@@ -70,7 +70,7 @@ export function Ranking({ rank }) {
               <img src={Star} alt="" />
               <img src={NoStart} alt="" />
             </> :
-            rank > 8 && rank < 9 ?
+            rank > 8 && rank <= 9 ?
             <>
               <img src={Star} alt="" />
               <img src={Star} alt="" />

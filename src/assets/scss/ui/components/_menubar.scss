@@ -26,6 +26,24 @@
       &:focus-visible {
         outline: none;
       }
+      &.active {
+        span {
+          background: #FFC700;
+          svg {
+            path {
+              fill: #111;
+            }
+          }
+        }
+      }
+      span {
+        align-items: center;
+        border-radius: 42px;
+        display: flex;
+        height: 42px;
+        justify-content: center;
+        width: 42px;
+      }
     }
   }
 }

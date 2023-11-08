@@ -33,13 +33,13 @@ export function Discover() {
       button.classList.remove('active')
     })
     e.target.classList.add('active')
-    navigate(`/prt-moviesApp/discover/${page}/${genres}`)
+    navigate(`/discover/${page}/${genres}`)
   }
 
   const getPag = (e, page) => {
     e.preventDefault()
     console.log(page)
-    navigate(`/prt-moviesApp/discover/${page}/${genres}`)
+    navigate(`/discover/${page}/${genres}`)
   }
 
   return (
