@@ -5,8 +5,7 @@ const baseAPI = axios.create({
   baseURL: '//api.themoviedb.org/3/',
   params: {
     include_adult: true,
-    language: 'en-US',
-    page: '1'
+    language: 'en-US'
   },
   headers: {
     accept: 'application/json',
@@ -14,8 +13,8 @@ const baseAPI = axios.create({
   }
 })
 
-export const getMovies = async () => {
-  const res = await baseAPI.get(`/trending/movie/week`)
+export const getMovies = async (page, genres) => {
+  const res = await baseAPI.get(`/discover/movie?page=${page}&with_genres=${genres}`)
   return res.data
 }
 
@@ -36,11 +35,6 @@ export const getGenres = async () => {
 
 export const getMovieById = async (id) => {
   const res = await baseAPI.get(`/movie/${id}`)
-  return res.data
-}
-
-export const getMovieByGenre = async (genre) => {
-  const res = await baseAPI.get(`/discover/movie?with_genres=${genre}`)
   return res.data
 }
 

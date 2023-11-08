@@ -25,6 +25,7 @@
       border: 0;
       border-radius: 25px;
       color: white;
+      cursor: pointer;
       display: inline-flex;
       font-size: 14px;
       font-weight: 400;
@@ -40,6 +41,9 @@
       &.active {
         background: #FFC700;
         color: #111;
+      }
+      &:focus-visible {
+        outline: none;
       }
     }
     span {

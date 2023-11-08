@@ -7,8 +7,12 @@
     button {
       background: transparent;
       border: 0;
+      cursor: pointer;
       margin-right: 21px;
       padding: 0;
+      &:focus-visible {
+        outline: none;
+      }
     }
   }
 }

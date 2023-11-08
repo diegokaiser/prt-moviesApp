@@ -42,14 +42,20 @@ export function Categories({
                   }
                 </> :
                 <>
-                <button type="button" className='active'>All</button>
+                <button 
+                  type="button" 
+                  className='active'
+                  onClick={(e) => handleFilter(e, 'all')}
+                >
+                  All
+                </button>
                   {
                     categories.map((category) => {
                       return (
                         <button
                           key={category.id}
                           type='button'
-                          onClick={(e) => handleFilter(e, category.name)}
+                          onClick={(e) => handleFilter(e, category.id)}
                         >
                           {category.name}
                         </button>

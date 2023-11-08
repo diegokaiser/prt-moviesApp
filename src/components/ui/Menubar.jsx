@@ -14,13 +14,11 @@ export function Menubar() {
         </Link>
         <Link 
           to={'/prt-moviesApp/search'}
-          state={{ title: 'Search' }}
         >
           <img src={SearchIco} alt="" />
         </Link>
         <Link 
           to={'/prt-moviesApp/bookmark'}
-          state={{ title: 'Bookmarks' }}
         >
           <img src={BookmarkIco} alt="" />
         </Link>

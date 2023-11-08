@@ -1,4 +1,3 @@
-import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { getMovieByKeyword } from '../../hooks/useFetch';
@@ -11,7 +10,7 @@ import { Loading } from '../elements/Loading';
 import { EmptyResults } from '../ui/EmptyResults';
 
 export function Results() {
-  let { state } = useLocation()
+  let title = 'Search'
   const [query, setQuery] = useState('')
   const [enable, setEnable] = useState(false)
   let results
@@ -43,7 +42,7 @@ export function Results() {
     <>
       <div className="results">
         <div className="results__content">
-          <Breadcrumbs title={state.title} />
+          <Breadcrumbs title={title} />
           <Search 
             handleSearch={handleSearch}
           />

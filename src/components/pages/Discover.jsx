@@ -1,40 +1,55 @@
 import { useQuery } from '@tanstack/react-query'
-import { useLocation } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { getMovies } from '../../hooks/useFetch'
-import { getMovieByGenre } from '../../hooks/useFetch'
 import { Breadcrumbs } from '../ui/Breadcrumbs'
 import { Categories } from '../ui/Categories'
 import { List } from '../ui/List'
 import { Item } from '../ui/Item'
 import { Loading } from '../elements/Loading'
 import { Error } from '../elements/Error'
+import { Pagination } from '../ui/Pagination'
+import { useState } from 'react'
 
 export function Discover() {
-  let { state } = useLocation()
+  const navigate = useNavigate()
+  let title = 'Discover'
+  let { page, genres } = useParams()
   let movies
-  const { status, data, refetch } = useQuery({
-    queryKey: ['movies'],
-    queryFn: getMovies
-  })
+
+  const { status, data } = useQuery(
+    ['movies', page, genres],
+    () => getMovies(page, genres)
+  )
 
   if(status === 'success') {
     movies = [...data.results]
     console.log(data)
   }
 
-  const onFilter = (e, genre) => {
+  const getGenre = (e, genres) => {
     e.preventDefault()
-    console.log(genre.toLowerCase())
+    let buttons = document.querySelectorAll('.categories__content button')
+    buttons.forEach((button) => {
+      button.classList.remove('active')
+    })
+    e.target.classList.add('active')
+    navigate(`/prt-moviesApp/discover/${page}/${genres}`)
+  }
+
+  const getPag = (e, page) => {
+    e.preventDefault()
+    console.log(page)
+    navigate(`/prt-moviesApp/discover/${page}/${genres}`)
   }
 
   return (
     <>
       <div className="discover">
         <div className="discover__content">
-          <Breadcrumbs title={state.title} />
+          <Breadcrumbs title={title} />
           <Categories 
             listMode={false}
-            handleFilter={onFilter}
+            handleFilter={getGenre}
           />
           <List>
             {
@@ -52,6 +67,13 @@ export function Discover() {
                       />
                     )
                   })
+                }
+                {
+                  <Pagination 
+                    page={page}
+                    count={500}
+                    handlePag={getPag}
+                  />
                 }
               </> :
               <Loading />
