@@ -1,3 +1,11 @@
+import {
+  auth,
+  googleProvider
+} from '../../config/firebase.config'
+import {
+  onAuthStateChanged
+} from 'firebase/auth'
+import { useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getMovies } from '../../hooks/useFetch'
@@ -8,13 +16,23 @@ import { Item } from '../ui/Item'
 import { Loading } from '../elements/Loading'
 import { Error } from '../elements/Error'
 import { Pagination } from '../ui/Pagination'
-import { useState } from 'react'
 
 export function Discover() {
   const navigate = useNavigate()
   let title = 'Discover'
   let { page, genres } = useParams()
   let movies
+  const [userObj, setUserObj] = useState({})
+
+  useEffect(() => {
+    onAuthStateChanged(auth, async (user) => {
+      if (user) {
+        setUserObj({...user})
+      } else {
+        setUserObj({})
+      }
+    })
+  }, [])
 
   const { status, data } = useQuery(
     ['movies', page, genres],
@@ -23,7 +41,6 @@ export function Discover() {
 
   if(status === 'success') {
     movies = [...data.results]
-    console.log(data)
   }
 
   const getGenre = (e, genres) => {
@@ -38,7 +55,6 @@ export function Discover() {
 
   const getPag = (e, page) => {
     e.preventDefault()
-    console.log(page)
     navigate(`/discover/${page}/${genres}`)
   }
 
@@ -61,6 +77,7 @@ export function Discover() {
                       <Item 
                         key={movie.id}
                         id={movie.id}
+                        userObj={userObj}
                         title={movie.title}
                         poster={movie.poster_path}
                         rank={movie.vote_average}

@@ -1,19 +1,27 @@
 .empty {
   align-items: flex-start;
   display: flex;
+  gap: 16px;
   justify-content: space-between;
   opacity: .25;
   &__figure {
     background: #424242;
     border-radius: 14px;
-    height: 273px;
+    height: 274px;
     position: relative;
-    width: 182px;
+    width: 50%;
+    @include mobile420 {
+      height: 273px;
+      width: 182px;
+    }
   }
   &__data {
     display: flex;
     flex-direction: column;
-    width: 180px;
+    width: 50%;
+    @include mobile420 {
+      width: 180px;
+    }
   }
   &__title {
     background: #424242;
